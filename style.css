@@ -1,0 +1,130 @@
+*{
+  margin: 0;
+}
+.portada{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 2050px;
+}
+
+.presentacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 700px;
+  background-image: url(https://photographicpunctuation.files.wordpress.com/2014/11/15805939336_eec9106607_k.jpg);
+  background-repeat: no-repeat;
+  background-size: 100vw 700px;
+}
+
+.presentacion h1{
+  margin-bottom: 345px;
+  color: white;
+  font-size: 86px;
+  font-family: 'Source Serif Pro', serif;
+}
+
+#caract-2{
+  margin-top: 600px;
+
+}
+
+.carac-2{
+  display: flex;
+  width: 100vw;
+  height: 867px;
+  background-image: url("caract-2.jpg");
+  background-repeat: no-repeat;
+  background-size: 100vw auto;
+}
+
+#caract-1{
+  margin-top: 600px;
+}
+
+.carac-1{
+  display: flex;
+  width: 100vw;
+  height: 850px;
+  background-image: url(http://i.imgur.com/hbykmxu.png);
+  background-repeat: no-repeat;
+  background-size: 100vw 500px;
+  background-position: top center;
+  z-index: 2;
+
+}
+
+.container{
+  height: 75vh;
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+.iphone{
+  display: inline-block;
+  margin-top: 150px;
+  position: relative;
+  transition: .9s;
+}
+.shape{
+  background-image: url("shape.jpg");
+  width: 128px;
+  height: 128px;
+  position: absolute;
+  top: 75px;
+  right: 161px;
+  background-position: -54px;
+  -webkit-mask-image: url(mascara.png);
+  mask-image: url(mascara.png);
+}
+
+.tabla{
+  height: 472px;
+  display: flex;
+  justify-content: center;
+  background-color: #D3D0CB;
+
+}
+
+.tabla h3{
+  font-family: 'Source Serif Pro', serif;
+  margin-top: -52px;
+  margin-right: -41px;
+  font-size: 34px;
+  color: black;
+}
+
+.tabla table{
+  width: 565px;
+  margin: 0;
+  opacity: 0;
+  transition: 4s;
+}
+
+.tabla td{
+  margin: 0;
+  height: 40px;
+  width: 188.333px;
+  padding-left: 10px;
+  padding-right: 15px;
+  /*border: 1px solid black;*/
+  font-family: 'Poiret One', cursive;
+
+}
+
+.tabla-top {
+  border-bottom: 1px dashed black;
+  font-size: 23px;
+}
+
+.tabla-left{
+  border-bottom: 1px dashed black;
+  /*border-right: 1px dashed black;*/
+  font-size: 20px;
+}
+
+.tabla-0{
+  border: none !important;
+}

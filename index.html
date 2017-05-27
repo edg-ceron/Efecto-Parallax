@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Especial 1 - Parallax</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
+  </head>
+  <body>
+    <section class="portada">
+      <div class="presentacion"><h1>iPhone 6</h1></div>
+      <div class="carac-2" id="caract-2"></div>
+      <div class="carac-1" id="caract-1"></div>
+    </section>
+    <section class="container">
+      <figure class="iphone" id="iphone">
+        <img src="iphone.jpg" alt="">
+        <div class="shape" id="mask">
+        </div>
+      </figure>
+    </section>
+    <section class="tabla">
+      <h3>Caracteristicas:</h3>
+      <table id="opacidad">
+        <tr>
+          <td class="tabla-0"></td>
+          <td class="tabla-top"><strong>iphone 6</strong></td>
+          <td class="tabla-top"><strong>iphone 6 plus</strong></td>
+        </tr>
+        <tr>
+          <td class="tabla-left">Pantalla</td>
+          <td>4.7 pulgadas</td>
+          <td>5.5 pulgadas</td>
+        </tr>
+        <tr>
+          <td class="tabla-left">Resolucion</td>
+          <td>1334 * 750 px</td>
+          <td>1920 * 1080 px</td>
+        </tr>
+        <tr>
+          <td class="tabla-left">Sistema Operativo</td>
+          <td>ios 9</td>
+          <td>ios 9</td>
+        </tr>
+        <tr>
+          <td class="tabla-left">Camara trasea</td>
+          <td>12 megapixeles con apertura de F/2.2;grabacion de video 4K</td>
+          <td>12 megapixeles con apertura de F/2.2 y estabilización de imagen óptica; grabación de video 4K</td>
+        </tr>
+        <tr>
+          <td class="tabla-left">Tamaño</td>
+          <td>138.3x67.1x7.1mm</td>
+          <td>158.2x77.9x7.3mm</td>
+        </tr>
+        <tr>
+          <td class="tabla-left">Peso</td>
+          <td>143 gramos</td>
+          <td>192 gramos</td>
+        </tr>
+
+      </table>
+
+    </section>
+    <script type="text/javascript">
+    const $iphone = document.getElementById("iphone");
+    const $mask = document.getElementById("mask");
+    const $opacidad = document.getElementById("opacidad")
+    const $margin1 = document.getElementById("caract-2")
+    const $margin2 = document.getElementById("caract-1")
+    window.addEventListener("scroll",function(e){
+      console.log(window,scrollY);
+      // $iphone.style.marginTop = window.scrollY +"px";
+      var position= 54+ window.scrollY;
+      var tamOpacidad = -2072+window.scrollY;
+      var margin = 600-window.scrollY;
+      var margin2 = 1567-window.scrollY;
+      if (margin <= 0){
+        margin= 0;
+      }
+      if (margin2 <= 20){
+        margin2= 20;
+      }
+
+      $mask.style.backgroundPosition= "-" + position + "px";
+      $iphone.style.transform = "rotate(-"+position*0.002+"deg)";
+      $opacidad.style.opacity = tamOpacidad;
+      $margin1.style.marginTop =margin + "px";
+      $margin2.style.marginTop =margin2 + "px";
+
+      // $margin11.style.marginTop =+margin*0.01 + "px";
+    });
+    </script>
+  </body>
+</html>
